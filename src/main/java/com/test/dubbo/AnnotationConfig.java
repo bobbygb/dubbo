@@ -36,7 +36,7 @@ public class AnnotationConfig implements TransactionManagementConfigurer{
     @Bean
 	public RegistryConfig registryConfig() {
     	RegistryConfig registryConfig = new RegistryConfig();
-		registryConfig.setAddress("192.168.9.153:2181");
+		registryConfig.setAddress("192.168.1.103:2181");
 		registryConfig.setProtocol("zookeeper");
 		registryConfig.setCheck(false);
 		return registryConfig;
@@ -52,9 +52,9 @@ public class AnnotationConfig implements TransactionManagementConfigurer{
     @Bean(name = "dataSource")
     public DataSource dataSource(){
  	   String DRIVER = "org.mariadb.jdbc.Driver";
-       String URL_JDBC = "jdbc:mysql://192.168.9.153/trustee?characterEncoding=utf-8&autoReconnect=true";
-       String USER_NAME = "mysqluser";
- 	   String PASS_WORD = "mysqluser@zyxr.com";
+       String URL_JDBC = "jdbc:mysql://192.168.1.103/trustee?characterEncoding=utf-8&autoReconnect=true";
+       String USER_NAME = "root";
+ 	   String PASS_WORD = "root";
        org.apache.tomcat.dbcp.dbcp.BasicDataSource ds = new org.apache.tomcat.dbcp.dbcp.BasicDataSource();
  	   ds.setDriverClassName(DRIVER);
  	   ds.setUrl(URL_JDBC);
